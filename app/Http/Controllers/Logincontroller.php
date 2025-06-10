@@ -17,9 +17,9 @@ class Logincontroller extends Controller
         $email=$request->input('email');
         $password=$request->input('password');
         if(Auth::attempt(['email'=>$email,'password'=>$password])){
-            $user=User::where('email',$email)->first();
-            Auth::login($user);
-            return Redirect::to('/home');
+            // $user=User::where('email',$email)->f irst();
+            Auth::user();
+            return redirect('/home');
         }
         else{
             return back()->withErrors(['Invalid']);

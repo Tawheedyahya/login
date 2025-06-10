@@ -7,4 +7,10 @@
     cp .env.example .env
 6.if key is not there run this command
     php artisan key:generate
-also check your asset path my asset path is public
+    also check your asset path my asset path is public
+
+7.then important one i can set only one admin if role==0 tha user is admin
+  so create admin to run this command
+    php artisan db:seed -class='UserSeeder'
+
+

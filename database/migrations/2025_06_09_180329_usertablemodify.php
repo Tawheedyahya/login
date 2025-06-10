@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -11,14 +12,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name',20);
-            $table->string('email');
-            $table->string('password');
-            $table->integer('role')->notNullable();
-            $table->timestamps();
-        });
+        // Schema::table('users',function(Blueprint $table)){}
+        // DB::statement('ALTER table users add column place varchar(50) after role');
+        DB::statement('ALTER table users add column age int after role');
+        DB::statement('ALTER table users add column work varchar(50) after role');
     }
 
     /**
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        //
     }
 };

@@ -20,9 +20,11 @@ class Registercontroller extends Controller
         $user->name=$request->input('name');
         $user->email=$request->input('email');
         $user->password=Hash::make($request-> input('password'));
+        $user->role=1;
         $user->save();
         Auth::login($user);
-        return Redirect::to('home');
+        return redirect()->route('home');
+
     }
 
 }

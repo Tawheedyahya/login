@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2025 at 09:02 AM
+-- Generation Time: Jun 10, 2025 at 07:49 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,7 +39,8 @@ CREATE TABLE `migrations` (
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2025_04_27_061310_create_users_table', 1),
-(2, '2025_04_27_062443_create_sessions_table', 2);
+(2, '2025_04_27_062443_create_sessions_table', 1),
+(3, '2025_06_09_180329_usertablemodify', 2);
 
 -- --------------------------------------------------------
 
@@ -61,10 +62,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('0fHfxQNMPZkgeuoiX9WnyQREhjaKy2VMb6lgIxl5', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoic1JBQzAxd2ZtTmVJR3daUHdSNUFKT2xVeUpuMk1NV3d2eVo3VXFMayI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1749037838),
-('3QT9jxbCEGiOJxExPZhFzkYPeKhS9hW18JpJ1Dvk', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiS2kyZkF3QnVtQ2JYOVZXR1FBNTZTdGNhUzhldmI0RmNLdm9tNXlDTyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9rYSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1748960301),
-('7wF2qZHMHkk7EbspNlp2CqiVVFwaTZ9lUiCCfvhy', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVXhuc05vSnFGUHpVV1V0YzhnQU9xamFoQkNBQ0pJQTYyTFlZdjU3UyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1749452482),
-('zSX8NXd40PqTrQNM3PTEHjasiReIJyw6Oc2Wtn6H', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiRW53ZWd3Qm1halEyOWJnWmFMbnpRa3pudWRmVE9hWXp3RGZlQ21SQyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1749057366);
+('3nhzywVmcBrkGrvmPovGj6F5pGV9Eob0bgx0odAG', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoieVdVM0hsVGZpcVpibHhDR25STFptb2Y0bndSWnB4NndwR1BaYVFJOCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9kYXNoYm9hcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1749534386);
 
 -- --------------------------------------------------------
 
@@ -77,16 +75,26 @@ CREATE TABLE `users` (
   `name` varchar(20) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `role` int(11) NOT NULL,
+  `work` varchar(50) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `place` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'yahi', 'y@gmail.com', '$2y$12$3DEb0vx2EunIAwbk0JqPIuwXyTYf0psYnQmjJjjaScSRzkZh5z1MK', '2025-06-09 01:31:16', '2025-06-09 01:31:16');
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`, `work`, `age`, `created_at`, `updated_at`, `place`) VALUES
+(1, 'admin', 'admin@gmail.com', '$2y$12$5ZBh6v7yvVi7ou0/GxDsA.1596AKhi9Zf6xUSOWN6/LJ9JR30y6OS', 0, NULL, NULL, '2025-06-09 11:03:03', '2025-06-09 11:03:03', NULL),
+(6, 'mubi', 'mubi@gmail.com', '$2y$12$nVQdbdc5QdysSL/Ic4Bzk.koBQlqWqwP.Z7VpJiRjskbGC/jna6jy', 1, 'ias', NULL, '2025-06-09 13:21:47', '2025-06-10 00:09:06', 'cbee'),
+(9, 'aaa', 'dmin@gmail.com', '$2y$12$mTxT/4HAlAk.gniwFs8sve9SYIkorsXDWiObIUC/3vq/cduhOAjSu', 1, 'aa', NULL, '2025-06-09 14:10:26', '2025-06-10 00:15:10', 'aa'),
+(10, 'yahi', 'adn@gmail.com', '$2y$12$PVuE9eBsccMD9VGoACt4HuyPFYyo8maBPy5L39lgMK3vhmt0aos52', 1, 'a', NULL, '2025-06-09 14:12:49', '2025-06-09 14:12:49', 'a'),
+(11, 'aa', '', '$2y$12$iZTXRr5GFHce7ajlyQzxAe0IzqdRzAvNVXgDzavFKesGFLLBP/Xfy', 1, 'aa', NULL, '2025-06-09 14:40:21', '2025-06-10 00:07:48', 'aa'),
+(12, 'abdulla', '', '$2y$12$xkvCmVU0vgjCp1kvjgatmeZLaXx3SwT20wPhQ2FWkEIH/raZIKUFu', 1, 'b.pharm', NULL, '2025-06-09 23:56:21', '2025-06-10 00:07:58', 'apk'),
+(13, 'yahii', 'yahi@gmail.com', '$2y$12$HWRNzlwovvdS.Agm5adXSuYLNTSXKsg9iEQPGWxQxOQKq.Mq4xk/W', 1, 'developer', NULL, '2025-06-10 00:15:56', '2025-06-10 00:15:56', 'tuty');
 
 --
 -- Indexes for dumped tables
@@ -120,13 +128,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
